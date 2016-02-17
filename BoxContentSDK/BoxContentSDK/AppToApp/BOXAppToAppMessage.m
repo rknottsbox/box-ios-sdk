@@ -5,7 +5,7 @@
 //  Copyright (c) 2015 Box. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import <Cocoa/Cocoa.h>
 
 #import "BOXAppToAppMessage.h"
 #import "BOXAppToAppAnnotationKeys.h"
@@ -187,7 +187,7 @@
             {
                 NSString *key = pair[0];
                 NSString *value = pair[1];
-                value = [value stringByReplacingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+                value = [value stringByRemovingPercentEncoding];
                 result[key] = value;
             }
         }
@@ -210,7 +210,7 @@
 
     if (actionURL != nil)
     {
-        if ([[UIApplication sharedApplication] openURL:actionURL])
+        if ([[NSWorkspace sharedWorkspace] openURL:actionURL])
         {
             status = BOXAppToAppStatusSuccess;
         }

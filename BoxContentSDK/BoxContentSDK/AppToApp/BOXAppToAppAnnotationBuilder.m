@@ -103,7 +103,7 @@
 
     if (result != nil)
     {
-        result = [result stringByReplacingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+        result = [result stringByRemovingPercentEncoding];
         [info removeObjectForKey:key];
     }
 
@@ -156,7 +156,7 @@
 {
     NSString *result = string;
     // percent de-encode the string
-    result = [result stringByReplacingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+    result = [result stringByRemovingPercentEncoding];
 
     return result;
 }

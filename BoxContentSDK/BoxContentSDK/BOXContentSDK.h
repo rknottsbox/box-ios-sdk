@@ -32,7 +32,7 @@
 #import "BOXContentClient+Metadata.h"
 
 // Session
-#import "BOXAuthorizationViewController.h"
+//#import "BOXAuthorizationViewController.h"
 #import "BOXAbstractSession.h"
 #import "BOXOAuth2Session.h"
 #import "BOXParallelOAuth2Session.h"
@@ -132,7 +132,6 @@
 #import "BOXCollaboration.h"
 #import "BOXGroup.h"
 #import "BOXFileVersion.h"
-#import "BOXAssetInputStream.h"
 #import "BOXMetadata.h"
 #import "BOXMetadataKeyValue.h"
 #import "BOXMetadataUpdateTask.h"

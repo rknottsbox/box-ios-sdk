@@ -122,16 +122,6 @@
     return request;
 }
 
-- (BOXFileUploadRequest *)fileUploadRequestToFolderWithID:(NSString *)folderID
-                                              fromALAsset:(ALAsset *)asset
-                                        withAssetsLibrary:(ALAssetsLibrary *)assetsLibrary
-{
-    BOXFileUploadRequest *request = [[BOXFileUploadRequest alloc] initWithALAsset:asset assetsLibrary:assetsLibrary targetForlderID:folderID];
-    [self prepareRequest:request];
-    
-    return request;
-}
-
 - (BOXFileUploadNewVersionRequest *)fileUploadNewVersionRequestWithID:(NSString *)fileID
                                                     fromLocalFilePath:(NSString *)localFilePath
 {
@@ -150,15 +140,6 @@
     return request;
 }
 
-- (BOXFileUploadNewVersionRequest *)fileUploadNewVersionRequestWithID:(NSString *)fileID
-                                                          fromALAsset:(ALAsset *)asset
-                                                    withAssetsLibrary:(ALAssetsLibrary *)assetsLibrary
-{
-    BOXFileUploadNewVersionRequest *request = [[BOXFileUploadNewVersionRequest alloc] initWithFileID:fileID ALAsset:asset assetsLibrary:assetsLibrary];
-    [self prepareRequest:request];
-    
-    return request;
-}
 
 - (BOXPreflightCheckRequest *)fileUploadPreflightCheckRequestForNewFileInFolderWithID:(NSString *)folderID
                                                                                  name:(NSString *)fileName

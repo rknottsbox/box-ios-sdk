@@ -31,6 +31,4 @@
 + (NSData *)sha1HashDataOfData:(NSData *)data;
 + (NSString *)sha1HashOfData:(NSData *)data;
 
-+ (NSString *)sha1HashOfALAsset:(ALAsset *)asset;
-
 @end

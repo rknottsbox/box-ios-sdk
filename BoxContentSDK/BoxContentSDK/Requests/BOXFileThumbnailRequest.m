@@ -90,7 +90,7 @@
         NSOutputStream *outputStream = self.outputStream;
         dataOperation.successBlock = ^(NSString *fileID, long long expectedTotalBytes) {
             NSData *data = [outputStream propertyForKey:NSStreamDataWrittenToMemoryStreamKey];
-            UIImage *image = [UIImage imageWithData:data scale:[[UIScreen mainScreen] scale]];
+            NSImage *image = [[NSImage alloc] initWithData:data];
             [BOXDispatchHelper callCompletionBlock:^{
                 completionBlock(image, nil);
             } onMainThread:isMainThread];
